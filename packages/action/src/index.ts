@@ -1,0 +1,3 @@
+export {
+    getActionInfo
+}from './getInfo'

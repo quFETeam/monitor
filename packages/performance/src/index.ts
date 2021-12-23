@@ -1,0 +1,3 @@
+export {
+    getPerformanceInfo
+} from './getInfo'

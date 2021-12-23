@@ -1,0 +1,15 @@
+{
+  "name": "@monitor/performance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/performance.esm-bundler.js",
+  "buildOptions": {
+    "name":"MonitorPerformance",
+    "formats":[
+      "cjs",
+      "esm-bundler",
+      "global"
+    ]
+  },
+  "license": "MIT"
+}

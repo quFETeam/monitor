@@ -1,0 +1,14 @@
+{
+  "name": "@monitor/shared",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/shared.esm-bundler.js",
+  "buildOptions": {
+    "name":"MonitorShared",
+    "formats":[
+      "cjs",
+      "esm-bundler"
+    ]
+  },
+  "license": "MIT"
+}

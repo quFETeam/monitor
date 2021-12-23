@@ -1,0 +1,15 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/monitor.runtime.esm-bundler.js",
+  "buildOptions": {
+    "name":"Monitor",
+    "formats":[
+      "cjs",
+      "esm-bundler",
+      "global"
+    ]
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@monitor/action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/action.esm-bundler.js",
+  "buildOptions": {
+    "name":"MonitorAction",
+    "formats":[
+      "cjs",
+      "esm-bundler",
+      "global"
+    ]
+  },
+  "license": "MIT"
+}
