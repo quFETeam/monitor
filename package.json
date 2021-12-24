@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
-    "test": "jest"
+    "test": "jest",
+    "fix": "eslint --fix --ext .js --ext .ts packages/"
   },
   "name": "monitor",
   "version": "1.0.0",
@@ -21,16 +22,17 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@types/jest": "^26.0.24",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
     "babel-jest": "^27.4.5",
     "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "execa": "5.0.0",
     "jest": "26.0.0",
     "rollup": "^2.61.1",
     "rollup-plugin-typescript2": "^0.31.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
-  },
-  "dependencies": {
-    "@typescript-eslint/parser": "^5.8.0"
   }
 }

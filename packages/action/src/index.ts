@@ -1,3 +1,3 @@
 export {
-    getActionInfo
-}from './getInfo'
+  getActionInfo,
+} from './getInfo';

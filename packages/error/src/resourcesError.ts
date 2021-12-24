@@ -1,19 +1,14 @@
-/**
- * @description: 监听js错误
- * @param {*}
- * @return {*}
- */
- export function getWindowsError(): void{
-    window.onerror = function(msg, url, row, col, error) {
-        console.log(error.stack)
-        console.log(error instanceof TypeError)
-        //type: 'javascript'
-        console.log(`row:${row}`)// 发生错误时的代码行数
-        console.log(`col:${col}`)// 发生错误时的代码列数
-        console.log(`error:${error && error.stack? error.stack : msg}`)// 错误信息
-        console.log(`url:${url}`)// 错误文件
-        console.log('所有的onerror错误信息')
-    }
+export function getWindowsError(): void {
+  window.onerror = (msg, url, row, col, error) => {
+    console.log(error.stack);
+    console.log(error instanceof TypeError);
+    // type: 'javascript'
+    console.log(`row:${row}`);// 发生错误时的代码行数
+    console.log(`col:${col}`);// 发生错误时的代码列数
+    console.log(`error:${error && error.stack ? error.stack : msg}`);// 错误信息
+    console.log(`url:${url}`);// 错误文件
+    console.log('所有的onerror错误信息');
+  };
 }
 /**
  * @description: 捕获资源加载失败错误 js css img
@@ -21,31 +16,31 @@
  * @param {*}
  * @return {*}
  */
- export function getSourceError(): void{
-    addEventListener('error', e => {
-        const target = e.target
-        console.log(e)
-        console.log(e.error instanceof ReferenceError)
-        if (target != window) {   
-            console.log(`type:${(target as any).localName}`)
-            console.log(`url:${(target as any).src || (target as any).href}`)
-            console.log('所有的ListenerError错误信息')
-        }
-    }, true)
+export function getSourceError(): void {
+  addEventListener('error', (e) => {
+    const { target } = e;
+    console.log(e);
+    console.log(e.error instanceof ReferenceError);
+    if (target !== window) {
+      console.log(`type:${(target as any).localName}`);
+      console.log(`url:${(target as any).src || (target as any).href}`);
+      console.log('所有的ListenerError错误信息');
+    }
+  }, true);
 }
 /**
  * @description: 捕获promise异常
  * @param {*}
  * @return {*}
  */
- export function getPromiseError():void{
-    addEventListener('unhandledrejection', e => {
-        //type: 'promise'
-        console.log(e)
-        console.log(e.reason instanceof ReferenceError)
-        console.log(`msg:${(e.reason && e.reason.msg) || e.reason || ''}`)
-        console.log('所有的promise错误信息')
-    })
+export function getPromiseError():void {
+  addEventListener('unhandledrejection', (e) => {
+    // type: 'promise'
+    console.log(e);
+    console.log(e.reason instanceof ReferenceError);
+    console.log(`msg:${(e.reason && e.reason.msg) || e.reason || ''}`);
+    console.log('所有的promise错误信息');
+  });
 }
 
 /**
@@ -53,21 +48,21 @@
  * @param {*}
  * @return {*}
  */
- export function getResources():void {
-    if (!window.performance) return
-    //加载页面时加载的资源
-    const entries = window.performance.getEntriesByType('resource')
-    // console.log(entries)
-    parsePerformanceEntries(entries)
-    //监听后续加载资源
-    const observerPaint = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        // console.log(list.getEntries())
-        parsePerformanceEntries(entries)
-    })
-    observerPaint.observe({
-        entryTypes: ['resource']
-    })
+export function getResources():void {
+  if (!window.performance) return;
+  // 加载页面时加载的资源
+  const entries = window.performance.getEntriesByType('resource');
+  // console.log(entries)
+  parsePerformanceEntries(entries);
+  // 监听后续加载资源
+  const observerResource = new PerformanceObserver((list) => {
+    const resourceEntries = list.getEntries();
+    // console.log(list.getEntries())
+    parsePerformanceEntries(resourceEntries);
+  });
+  observerResource.observe({
+    entryTypes: ['resource'],
+  });
 }
 
 /**
@@ -75,17 +70,17 @@
  * @param {*}
  * @return {*}
  */
-function parsePerformanceEntries(entries):void{
-    if(!entries||!entries.length)return
-    entries.forEach(item => {
-        console.log(item)
-        console.log(item.duration.toFixed(2)) // 资源加载耗时
-        console.log(item.name)
-        console.log(item.transferSize) // 资源大小
-        console.log(item.nextHopProtocol) // 资源所用协议
-    });
+function parsePerformanceEntries(entries):void {
+  if (!entries || !entries.length) return;
+  entries.forEach((item) => {
+    console.log(item);
+    console.log(item.duration.toFixed(2)); // 资源加载耗时
+    console.log(item.name);
+    console.log(item.transferSize); // 资源大小
+    console.log(item.nextHopProtocol); // 资源所用协议
+  });
 }
 
-function parseError(){
+// function parseError() {
 
-}
+// }

@@ -11,5 +11,10 @@
       "global"
     ]
   },
+  "dependencies": {
+    "@monitor/performance": "^1.0.0",
+    "@monitor/action": "^1.0.0",
+    "@monitor/error": "^1.0.0"
+  },
   "license": "MIT"
 }

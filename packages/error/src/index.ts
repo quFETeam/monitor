@@ -1,3 +1,3 @@
 export {
-    getError
-}from './getError'
+  getError,
+} from './getError';

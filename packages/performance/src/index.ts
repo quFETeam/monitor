@@ -1,3 +1,3 @@
 export {
-    getPerformanceInfo
-} from './getInfo'
+  getPerformanceInfo,
+} from './getInfo';

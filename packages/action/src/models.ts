@@ -4,6 +4,6 @@ export interface actionModel {
     ua: string
     time: number
     screen: string
-    referrer?:string 
-    pageUrl:string   
+    referrer?:string
+    pageUrl:string
 }

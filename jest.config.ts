@@ -118,12 +118,13 @@ export default {
 
   // A list of paths to directories that Jest should use to search for files in
   roots: [
-    "<rootDir>"
+    '<rootDir>',
   ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 
+  // eslint-disable-next-line max-len
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
 
