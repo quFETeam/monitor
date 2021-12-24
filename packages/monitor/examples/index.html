@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-12-23 15:03:50
- * @LastEditTime: 2021-12-23 22:53:01
+ * @LastEditTime: 2021-12-24 15:43:23
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /monitor/packages/monitor/examples/index.html
@@ -12,16 +12,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/pc/css/blog_code-01256533b5.min.css">
+    <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/chart-3456820cac.css" />
     <title>Document</title>
-    <img src="https://blog.csdn.net/lucky541788/article/details/98304659"/>
 </head>
-<body>
-    
+<body id='c'>
+    <img src="https://blog.csdn.net/lucky541788/article/details/98304659"/>
+    <img id='b' src="https://img-bss.csdn.net/1640226649214.png?v=333"/>
+    <img id='a' src="https://t7.baidu.com/it/u=2537132411,3912460994&fm=193&f=GIF"/>
 </body>
 <script src="../dist/monitor.global.js"></script>
 <script>
-    const a=1
-    a=2
+        setTimeout(()=>{
+            $('#c').append('<img src="https://t7.baidu.com/it/u=1280638388,4029210594&fm=193&f=GIF"/>')
+        },5000)
+        
+        let p = new Promise((reslove,reject)=>{
+            console.log(a)
+        }).then((v)=>{
+            console.log(v)
+        }).catch(e=>{
+            console.log(e)
+        }).then((v)=>{
+            console.log(111111)
+        })
+        console.log(a)
+        const a=1
+        // a=2
+    
 </script>
 <!-- <script src="../dist/monitor.esm-bundler.js" type="module"></script> -->
+<script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
 </html>

@@ -6,5 +6,6 @@ function init(){
     getPerformanceInfo()
     getError()
 }
-
-init()
+window.onload = () => {
+    init()
+}
