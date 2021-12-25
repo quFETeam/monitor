@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-12-23 15:03:50
- * @LastEditTime: 2021-12-24 19:15:29
+ * @LastEditTime: 2021-12-25 14:25:14
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /monitor/packages/monitor/examples/index.html
@@ -24,13 +24,16 @@
 <script src="../dist/monitor.global.js"></script>
 <script>
         setTimeout(()=>{
-            $('#c').append('<img src="https://t7.baidu.com/it/u=1280638388,4029210594&fm=193&f=GIF"/>')
+            // $('#c').append('<img src="https://t7.baidu.com/it/u=1280638388,4029210594&fm=193&f=GIF"/>')
+            fetch('a.html')
+            // .then(response => response.json())
+            // .then(data => console.log(data));
             // $.ajax({ url: "https://passport-api.csdn.net/v1/register/pc/wxapplets/checkLogin", context: document.body, success: function(){
             //     console.log(111)
             // }});
-            $.ajax({ url: "https://u.y.qq.com/cgi-bin/musics.fcg?sign=zzbd377a902ppvtmtqmeia8xmouizilg1f8b2ed7&_=1640344504127", context: document.body, success: function(){
-                console.log(111)
-            }});
+            // $.ajax({ url: "https://u.y.qq.com/cgi-bin/musics.fcg?sign=zzbd377a902ppvtmtqmeia8xmouizilg1f8b2ed7&_=1640344504127", context: document.body, success: function(){
+            //     console.log(111)
+            // }});
             // $.ajax({
             //     url:"./first/data/1.json?a=11",
             //     type:"get",
@@ -54,11 +57,11 @@
         }).then((v)=>{
             console.log(111111)
         })
-        console.log(a)
-        const a=1
+        // console.log(a)
+        // const a=1
         // a=2
         
 </script>
 <!-- <script src="../dist/monitor.esm-bundler.js" type="module"></script> -->
-<script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!-- <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script> -->
 </html>

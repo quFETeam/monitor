@@ -27,6 +27,9 @@ module.exports = {
     'import/no-unresolved': 0,
     'import/extensions': ['never' | 'always' | 'ignorePackages'],
     'no-multi-assign': ['error', { ignoreNonDeclaration: true }],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true, optionalDependencies: true, peerDependencies: true }],
+    '@typescript-eslint/no-explicit-any': ['off'],
+    'max-len': ['error', { code: 300 }],
+    'import/no-dynamic-require': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true, optionalDependencies: false, peerDependencies: false }],
   },
 };

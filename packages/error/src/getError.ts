@@ -1,7 +1,9 @@
 import {
-  getResources, getWindowsError, getSourceError, getPromiseError,
+  getResources, getSourceError,
 } from './resourcesError';
+import { getWindowsError, getPromiseError } from './jsError';
 import { getHttpError } from './xhrError';
+import { getFetchError } from './fetchError';
 
 export function getError() {
   console.log('error');
@@ -10,4 +12,5 @@ export function getError() {
   getSourceError();
   getPromiseError();
   getHttpError();
+  getFetchError();
 }
