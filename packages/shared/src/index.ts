@@ -4,7 +4,9 @@ export const isNotExist = (val: unknown): boolean => val === null || typeof val 
 export {
   superStorage,
 } from './localStorage';
-
+export {
+  userOption,
+} from './userOption';
 export const getUuid = () => {
   const s = [];
   const hexDigits = '0123456789abcdef';

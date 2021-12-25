@@ -11,5 +11,8 @@
       "global"
     ]
   },
+  "dependencies": {
+    "@monitor/shared": "^1.0.0"
+  },
   "license": "MIT"
 }

@@ -1,12 +1,14 @@
 import { getPerformanceInfo } from '@monitor/performance';
-// import { getActionInfo } from '@monitor/action';
-// import { getError } from '@monitor/error';
+import { getActionInfo } from '@monitor/action';
+import { getError } from '@monitor/error';
+import { userOption } from '@monitor/shared';
 
-function init() {
-  // getActionInfo();
+export function init(option) {
+  userOption.set(option);
+  getActionInfo();
   getPerformanceInfo();
-  // getError();
+  getError();
 }
-window.onload = () => {
-  init();
-};
+// window.onload = () => {
+//   init();
+// };
