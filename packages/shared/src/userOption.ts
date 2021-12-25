@@ -1,3 +1,5 @@
+import { optionModel } from './models';
+
 class UserOption {
   private static instance:UserOption;
 
@@ -10,7 +12,7 @@ class UserOption {
 
   private op = {};
 
-  public set(option) {
+  public set(option: optionModel) {
     this.op = option;
   }
 

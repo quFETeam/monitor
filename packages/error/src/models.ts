@@ -1,4 +1,6 @@
-export interface errorModel {
+import { commonModel } from '@monitor/shared';
+
+export interface errorModel extends commonModel{
     type: string
     errorType:string
     pageUrl: string
@@ -8,7 +10,7 @@ export interface errorModel {
     msg:string
 }
 
-export interface resourceModel {
+export interface resourceModel extends commonModel{
     resourcetype: string
     size:number
     sourceUrl:string

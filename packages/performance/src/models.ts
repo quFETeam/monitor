@@ -1,4 +1,6 @@
-export interface performanceModel {
+import { commonModel } from '@monitor/shared';
+
+export interface performanceModel extends commonModel{
     dnsTime: number // DNS 查询耗时
     appcacheTime:number // DNS 缓存时间
     tcpTime:number // tcp连接耗时

@@ -1,10 +1,10 @@
 {
-  "name": "@monitor/performance",
+  "name": "@monitor/queue",
   "version": "1.0.0",
   "main": "index.js",
-  "module": "dist/performance.esm-bundler.js",
+  "module": "dist/queue.esm-bundler.js",
   "buildOptions": {
-    "name":"MonitorPerformance",
+    "name":"MonitorAction",
     "formats":[
       "cjs",
       "esm-bundler",

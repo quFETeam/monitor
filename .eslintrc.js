@@ -30,6 +30,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': ['off'],
     'max-len': ['error', { code: 300 }],
     'import/no-dynamic-require': 'off',
+    'no-shadow': 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true, optionalDependencies: false, peerDependencies: false }],
   },
 };
