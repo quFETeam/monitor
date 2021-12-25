@@ -1,11 +1,11 @@
 import { getPerformanceInfo } from '@monitor/performance';
-import { getActionInfo } from '@monitor/action';
-import { getError } from '@monitor/error';
+// import { getActionInfo } from '@monitor/action';
+// import { getError } from '@monitor/error';
 
 function init() {
-  getActionInfo();
+  // getActionInfo();
   getPerformanceInfo();
-  getError();
+  // getError();
 }
 window.onload = () => {
   init();
